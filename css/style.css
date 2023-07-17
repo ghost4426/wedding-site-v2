@@ -1409,7 +1409,7 @@ body.offcanvason .oliven-nav-toggle {
 }
 .organization .item-box {
   padding: 60px 30px;
-  height: 100%;
+  height: auto;
   background-color: #fff;
   border: 1px solid #F6F1F0;
   border-right: 0;
@@ -2228,7 +2228,6 @@ body.offcanvason .oliven-nav-toggle {
     
     .p-40 {
     padding: 20px;
-    margin: 0 15px;
 }
 }
 
