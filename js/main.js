@@ -277,6 +277,8 @@
 
 // Countdown wedding
   (function () {
+    if(!document.getElementById("countdown")) return;
+
   const second = 1000,
         minute = second * 60,
         hour = minute * 60,
@@ -287,6 +289,7 @@
         let now = new Date().getTime(),
             distance = countDown - now;
 
+
         document.getElementById("days").innerText = Math.floor(distance / (day)),
           document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
           document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
@@ -294,13 +297,11 @@
 
         //do something later when date is reached
         if (distance < 0) {
-          let headline = document.getElementById("headline"),
-              countdown = document.getElementById("countdown"),
-              content = document.getElementById("content");
+          let headline = document.getElementById("countdown-headline"),
+              countdown = document.getElementById("countdown-content");
 
-          headline.innerText = "It's our wedding!";
-          countdown.style.display = "none";
-          content.style.display = "block";
+          headline.innerText = "Ván đã đóng, cơm đã nấu chúng mình đã kết hôn rồi ❤";
+          countdown.style.opacity = 0;
 
           clearInterval(x);
         }

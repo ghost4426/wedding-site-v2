@@ -1149,6 +1149,7 @@ body.offcanvason .oliven-nav-toggle {
     display: block;
     line-height: 1em;
     position: relative;
+    text-shadow: 0 1px #000;
 }
 .hero-inner .hero-subtitle {
     font-family: 'Nunito Sans', sans-serif;
@@ -1158,6 +1159,7 @@ body.offcanvason .oliven-nav-toggle {
     margin-bottom: 0;
     color: #fff;
     text-transform: uppercase;
+    text-shadow: 0 1px #000;
 }
 @media only screen and (max-width: 576px) {
     .hero-inner .hero-title {
@@ -1311,6 +1313,7 @@ body.offcanvason .oliven-nav-toggle {
     font-weight: 400;
     font-size: 60px;
     margin-bottom: 0;
+    text-shadow: 0 0.3px #000;
 }
 #countdown .section-head p {
         color: #FFF;
@@ -1333,6 +1336,7 @@ body.offcanvason .oliven-nav-toggle {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-shadow: 0 0.3px #000;
 }
 #countdown li span {
       display: block;
@@ -1394,7 +1398,7 @@ body.offcanvason .oliven-nav-toggle {
 }
 
 .story-img .story-img-2 {
-    width: 30% !important;
+    width: 120px;
     height: 120px;
     position: absolute;
     top: 15px;
@@ -1419,8 +1423,8 @@ body.offcanvason .oliven-nav-toggle {
 
 @media screen and (max-width: 991px) {
 .story-img .story-img-2 {
-    width: 30% !important;
-    height: 135px;
+    width: 120px;
+    height: 120px;
     position: absolute;
     top: 40px;
     right: 45px;
@@ -1430,7 +1434,7 @@ body.offcanvason .oliven-nav-toggle {
 
 @media screen and (max-width: 768px) {
     .story-img .story-img-2 {
-    width: 40% !important;
+    width: 120px;
     height: 120px;
     position: absolute;
     top: 15px;
@@ -2307,6 +2311,7 @@ body.offcanvason .oliven-nav-toggle {
     #countdown .section-head h4 {
     font-size: 32px;
     line-height: 1em;
+    text-shadow: 0 1px #000;
 }
     .seeyou .section-head h4 {
     font-size: 32px;
