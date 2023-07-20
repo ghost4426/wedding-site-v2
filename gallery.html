@@ -73,7 +73,6 @@
                 </div>
                 <div class="container">
                     <div id="gallery-images" class="row gallery-filter mt-3">
-
                     </div>
                 </div>
             </div>
@@ -154,7 +153,7 @@
                     var $galleryLink = $("<a>", { href: "https://storage.googleapis.com/wedding-gallery-4426/" + item.href, class: "img-zoom" });
                     var $galleryBox = $("<div>", { class: "gallery-box" });
                     var $galleryImg = $("<div>", { class: "gallery-img" }).append($("<img>", { src: "https://storage.googleapis.com/wedding-gallery-4426/" + item.href, class: "img-fluid mx-auto d-block", alt: "" }));
-                    var $galleryDetail = $("<div>", { class: "gallery-detail" }).append($("<h4>", { class: "mb-0", text: item.type === 'wedding' ? "Ảnh Cưới" : 'Đám Hỏi'  }));
+                    var $galleryDetail = $("<div>", { class: "gallery-detail" }).append($("<h4>", { class: "mb-0", text: item.type === 'wedding' ? "Ảnh Cưới" : 'Đám Hỏi' }));
 
                     // Gắn các phần tử con vào các phần tử cha
                     $galleryBox.append($galleryImg).append($galleryDetail);
@@ -163,6 +162,18 @@
 
                     // Thêm các phần tử vào trong phần tử có id="output"
                     $("#gallery-images").append($galleryItem);
+                });
+
+                // Magnific Popup
+                $(".img-zoom").magnificPopup({
+                    type: "image"
+                    , closeOnContentClick: !0
+                    , mainClass: "mfp-fade"
+                    , gallery: {
+                        enabled: !0
+                        , navigateByImgClick: !0
+                        , preload: [0, 1]
+                    }
                 });
             });
 
