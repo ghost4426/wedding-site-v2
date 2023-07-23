@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Jaeger x Jessi Wedding</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="icon" type="image/png" href="images/wedding-logo.png" />
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/themify-icons.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -48,8 +48,9 @@
             </nav>
             <!-- Sidebar Footer -->
             <div class="footer1"> <span class="separator"></span>
-                <p>Thanh Giàn & Thu Hà
-                    <br />Quảng Ngãi, 06 tháng 2023
+                <p>
+                    Make with <i class="ti-heart"></i> by <br />
+                    Jaeger x Jessi
                 </p>
             </div>
         </aside>
@@ -66,8 +67,8 @@
                     <div class="row">
                         <ul class="col list-unstyled list-inline mb-0 gallery-menu" id="gallery-filter">
                             <li class="list-inline-item"><a class="active" data-filter="*">Tất Cả</a></li>
-                            <li class="list-inline-item"><a class="" data-filter=".engagement">Đám Hỏi</a></li>
-                            <li class="list-inline-item"><a class="" data-filter=".wedding">Đám Cưới</a></li>
+                            <li class="list-inline-item"><a class="" data-filter=".engagement">Lễ Ăn Hỏi</a></li>
+                            <li class="list-inline-item"><a class="" data-filter=".wedding">Pre Wedding</a></li>
                         </ul>
                     </div>
                 </div>
@@ -146,21 +147,17 @@
                     { type: "wedding", href: "TIEN4590.jpg" },
                 ];
 
-                // Duyệt qua mảng và tạo các phần tử HTML tương ứng
                 galleryImage.forEach(function (item) {
-                    // Tạo các phần tử HTML
                     var $galleryItem = $("<div>", { class: "col-md-4 gallery-item " + item.type });
                     var $galleryLink = $("<a>", { href: "https://storage.googleapis.com/wedding-gallery-4426/" + item.href, class: "img-zoom" });
                     var $galleryBox = $("<div>", { class: "gallery-box" });
                     var $galleryImg = $("<div>", { class: "gallery-img" }).append($("<img>", { src: "https://storage.googleapis.com/wedding-gallery-4426/" + item.href, class: "img-fluid mx-auto d-block", alt: "" }));
-                    var $galleryDetail = $("<div>", { class: "gallery-detail" }).append($("<h4>", { class: "mb-0", text: item.type === 'wedding' ? "Ảnh Cưới" : 'Đám Hỏi' }));
+                    var $galleryDetail = $("<div>", { class: "gallery-detail" }).append($("<h4>", { class: "mb-0", text: item.type === 'wedding' ? "Pre Wedding" : 'Lễ Ăn Hỏi' }));
 
-                    // Gắn các phần tử con vào các phần tử cha
                     $galleryBox.append($galleryImg).append($galleryDetail);
                     $galleryLink.append($galleryBox);
                     $galleryItem.append($galleryLink);
 
-                    // Thêm các phần tử vào trong phần tử có id="output"
                     $("#gallery-images").append($galleryItem);
                 });
 

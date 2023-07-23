@@ -300,7 +300,7 @@
           let headline = document.getElementById("countdown-headline"),
               countdown = document.getElementById("countdown-content");
 
-          headline.innerText = "Ván đã đóng, cơm đã nấu chúng mình đã kết hôn rồi ❤";
+          headline.innerText = "Ván đã đóng, gạo đã nấu chúng mình đã kết hôn rồi ❤";
           countdown.style.opacity = 0;
 
           clearInterval(x);
