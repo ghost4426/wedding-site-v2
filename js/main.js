@@ -21,8 +21,8 @@
         }
     };
     // Preloader
-    $(window).load(function() {
-    $('.preloader').fadeOut("slow");
+    $(window).load(function () {
+        $('.preloader').fadeOut("slow");
     });
     // Animations
     var contentWayPoint = function () {
@@ -57,8 +57,8 @@
             offset: '85%'
         });
     };
-    
-    
+
+
     // Burger Menu 
     var burgerMenu = function () {
         $('.js-oliven-nav-toggle').on('click', function (event) {
@@ -92,8 +92,8 @@
             }
         });
     };
-    
-    
+
+
     // Document on load.
     $(function () {
         contentWayPoint();
@@ -118,7 +118,8 @@
         , responsive: {
             0: {
                 items: 1
-            , }
+                ,
+            }
             , 600: {
                 items: 2
             }
@@ -138,7 +139,8 @@
         , responsive: {
             0: {
                 items: 1
-            , }
+                ,
+            }
             , 600: {
                 items: 1
             }
@@ -171,76 +173,96 @@
     });
     // Smooth Scrolling
     $('a[href*="#"]')
-    // Remove links that don't actually link to anything
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function () {
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
         });
-      }
-    }
-  });
     // Gallery 
     $(window).on("load", function () {
-    var e = $(".gallery-filter")
-        , a = $("#gallery-filter");
-    e.isotope({
-        filter: "*"
-        , layoutMode: "masonry"
-        , animationOptions: {
-            duration: 750
-            , easing: "linear"
-        }
-    }), a.find("a").on("click", function () {
-        var o = $(this).attr("data-filter");
-        return a.find("a").removeClass("active"), $(this).addClass("active"), e.isotope({
-            filter: o
+        var e = $(".gallery-filter")
+            , a = $("#gallery-filter");
+        e.isotope({
+            filter: "*"
+            , layoutMode: "masonry"
             , animationOptions: {
-                animationDuration: 750
+                duration: 750
                 , easing: "linear"
-                , queue: !1
             }
-        }), !1
-    })
-});
-    // Magnific Popup
-    $(".img-zoom").magnificPopup({
-    type: "image"
-    , closeOnContentClick: !0
-    , mainClass: "mfp-fade"
-    , gallery: {
-        enabled: !0
-        , navigateByImgClick: !0
-        , preload: [0, 1]
+        }), a.find("a").on("click", function () {
+            var o = $(this).attr("data-filter");
+            return a.find("a").removeClass("active"), $(this).addClass("active"), e.isotope({
+                filter: o
+                , animationOptions: {
+                    animationDuration: 750
+                    , easing: "linear"
+                    , queue: !1
+                }
+            }), !1
+        })
+    });
+
+    // Progress-wrap
+    var progressPath = document.querySelector('.progress-wrap path');
+    var pathLength = progressPath.getTotalLength();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+    progressPath.style.strokeDashoffset = pathLength;
+    progressPath.getBoundingClientRect();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+    var updateProgress = function () {
+        var scroll = $(window).scrollTop();
+        var height = $(document).height() - $(window).height();
+        var progress = pathLength - (scroll * pathLength / height);
+        progressPath.style.strokeDashoffset = progress;
     }
-});
-    
-     // RSVP FORM 
+    updateProgress();
+    $(window).scroll(updateProgress);
+    var offset = 150;
+    var duration = 550;
+    jQuery(window).on('scroll', function () {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.progress-wrap').addClass('active-progress');
+        } else {
+            jQuery('.progress-wrap').removeClass('active-progress');
+        }
+    });
+    jQuery('.progress-wrap').on('click', function (event) {
+        event.preventDefault();
+        jQuery('html, body').animate({ scrollTop: 0 }, duration);
+        return false;
+    })
+
+    // RSVP FORM 
     var form = $('.contact__form'),
         message = $('.contact__msg'),
         form_data;
@@ -267,45 +289,47 @@
             url: form.attr('action'),
             data: form_data
         })
-        .done(done_func)
-        .fail(fail_func);
+            .done(done_func)
+            .fail(fail_func);
     });
-    
-    
-    
+
+
+
 }());
 
 // Countdown wedding
-  (function () {
-    if(!document.getElementById("countdown")) return;
+(function () {
+    if (!document.getElementById("countdown")) return;
 
-  const second = 1000,
+    const second = 1000,
         minute = second * 60,
         hour = minute * 60,
         day = hour * 24;
-  let birthday = "Aug 06, 2023 09:00:00",
-      countDown = new Date(birthday).getTime(),
-      x = setInterval(function() {    
-        let now = new Date().getTime(),
-            distance = countDown - now;
+    let birthday = "Aug 06, 2023 09:00:00",
+        countDown = new Date(birthday).getTime(),
+        x = setInterval(function () {
+            let now = new Date().getTime(),
+                distance = countDown - now;
 
 
-        document.getElementById("days").innerText = Math.floor(distance / (day)),
-          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+            document.getElementById("days").innerText = Math.floor(distance / (day)),
+                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
-        //do something later when date is reached
-        if (distance < 0) {
-          let headline = document.getElementById("countdown-headline"),
-              countdown = document.getElementById("countdown-content");
+            //do something later when date is reached
+            if (distance < 0) {
+                let headline = document.getElementById("countdown-headline"),
+                    countdown = document.getElementById("countdown-content");
 
-          headline.innerText = "Ván đã đóng, gạo đã nấu chúng mình đã kết hôn rồi ❤";
-          countdown.style.opacity = 0;
+                headline.innerText = "Ván đã đóng, gạo đã nấu chúng mình đã kết hôn rồi ❤";
+                countdown.style.opacity = 0;
 
-          clearInterval(x);
-        }
-        //seconds
-      }, 0)
-  }());
-    
+                clearInterval(x);
+            }
+            //seconds
+        }, 0)
+}());
+
+// YouTubePopUp
+$("a.vid").YouTubePopUp();
