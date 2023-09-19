@@ -212,7 +212,7 @@
         var e = $(".gallery-filter")
             , a = $("#gallery-filter");
         e.isotope({
-            filter: "*"
+            filter: ".engagement"
             , layoutMode: "masonry"
             , animationOptions: {
                 duration: 750

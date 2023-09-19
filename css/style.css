@@ -1342,11 +1342,9 @@ body.offcanvason .oliven-nav-toggle {
 .hero-inner .arrow i {
     position: relative;
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
     color: #fff;
     font-size: 20px;
+    font-weight: 900;
 }
 
 .hero-inner .arrow i:hover:after {
@@ -1707,6 +1705,11 @@ body.offcanvason .oliven-nav-toggle {
 }
 
 .organization .item-box:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.organization .item-box .item-hover {
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
 }

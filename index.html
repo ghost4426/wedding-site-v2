@@ -70,7 +70,11 @@
                             <h1 class="hero-title">Thanh Giàn & Thu Hà</h1>
                             <p class="hero-subtitle">Quảng Ngãi – 06 Tháng 8, 2023</p>
                             <div class="arrow bounce text-center">
-                                <a href="index.html#couple"> <i class="ti-heart"></i> </a>
+                                <a href="index.html#couple" style="font-weight: bold;">
+                                    <i class="ti-angle-double-down"></i>
+                                    <br />
+                                    <i class="ti-heart"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -105,7 +109,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 text-center animate-box" data-animate-effect="fadeInUp">
-                            <h3 class="oliven-couple-title">Sắp kết hôn!</h3>
+                            <h3 class="oliven-couple-title">Đã kết hôn!</h3>
                             <h4 class="oliven-couple-subtitle">Tư Nghĩa, Quảng Ngãi - 06 Tháng 8, 2023</h4>
                         </div>
                     </div>
@@ -137,9 +141,7 @@
                     <div class="row">
                         <div class="col-md-5 mb-30">
                             <div class="story-img animate-box" data-animate-effect="fadeInLeft">
-                                <div class="img"> <img
-                                        src="images/story.jpg"
-                                        class="img-fluid" alt=""> </div>
+                                <div class="img"> <img src="images/story.jpg" class="img-fluid" alt=""> </div>
                                 <div class="story-img-2 story-wedding"
                                     style="background-image: url(images/wedding-logo.png);"></div>
                             </div>
@@ -162,8 +164,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="section-head col-md-12 text-center"> <span><i class="ti-heart"></i></span>
-                            <h4>Rất mong được gặp mọi người!</h4>
-                            <h3>06.08.2023</h3>
+                            <h4>Rất mong được gặp mọi người tại buổi tiệc báo hỉ!</h4>
+                            <h3>28.09.2023</h3>
                         </div>
                     </div>
                 </div>
@@ -177,20 +179,19 @@
                             <h2 class="oliven-title">Lễ Cưới</h2>
                         </div>
                     </div>
-                    <div class="row bord-box bg-img"
-                        data-background="https://storage.googleapis.com/wedding-gallery-4426/TIEN4144.jpg">
-                        <div class="col-md-3 item-box">
+                    <div class="row bord-box bg-img" data-background="images/header/TIEN4144.jpg">
+                        <div class="col-md-3 item-box item-hover">
                             <h2 class="custom-font numb">01</h2>
                             <h6 class="title">Tiệc Nhà Gái</h6>
                             <p>Một buổi tiệc thân mật ra mắt gia đình hai bên với phía đàng gái
                             </p>
                         </div>
-                        <div class="col-md-3 item-box">
+                        <div class="col-md-3 item-box item-hover">
                             <h2 class="custom-font numb">02</h2>
                             <h6 class="title">Lễ Thành Hôn</h6>
                             <p>Thời điểm đánh dấu chúng mình chính thức về một nhà.</p>
                         </div>
-                        <div class="col-md-3 item-box">
+                        <div class="col-md-3 item-box item-hover">
                             <h2 class="custom-font numb">03</h2>
                             <h6 class="title">Tiệc Nhà Trai</h6>
                             <p>Một buổi tiệc mừng dịp bạn Giàn có vợ :)
@@ -199,7 +200,7 @@
                         <div class="col-md-3 item-box">
                             <h2 class="custom-font numb">04</h2>
                             <h6 class="title">Lễ Báo Hỉ</h6>
-                            <p>Một buổi tiệc khác thân mật tại TP Hồ chí Minh dành cho người người bạn, đồng nghiệp ở xa
+                            <p>Một buổi tiệc khác nho nhỏ tại TP Hồ chí Minh dành cho người người bạn, đồng nghiệp ở xa
                                 không thể chung vui cùng chúng mình tại Quảng Ngãi</p>
                         </div>
                     </div>
@@ -215,9 +216,11 @@
                     </div>
                     <div class="row">
                         <ul class="col list-unstyled list-inline mb-0 gallery-menu" id="gallery-filter">
-                            <li class="list-inline-item"><a class="active" data-filter="*">Tất Cả</a></li>
-                            <li class="list-inline-item"><a class="" data-filter=".engagement">Lễ Ăn Hỏi</a></li>
-                            <li class="list-inline-item"><a class="" data-filter=".wedding">Pre Wedding</a></li>
+                            <!-- <li class="list-inline-item"><a class="active" data-filter="*">Tất Cả</a></li> -->
+                            <li class="list-inline-item"><a class="active" data-filter=".engagement">Lễ Ăn Hỏi</a></li>
+                            <li class="list-inline-item"><a class="" data-filter=".pre-wedding">Pre Wedding</a></li>
+                            <li class="list-inline-item"><a class="" data-filter=".wedding">Tân Hôn</a></li>
+                            <li class="list-inline-item"><a class="" data-filter=".after-wedding">Báo Hỉ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -225,10 +228,22 @@
                     <div id="gallery-images" class="row gallery-filter mt-3">
 
                     </div>
-                    <div class="row">
-                        <div class="text-center">
-                            <a href="gallery.html"><input name="submit" type="submit" class="btn buttono"
-                                    value="Xem Tất cả"></a>
+                    <div class="row gallery-filter">
+                        <div class="text-center engagement">
+                            <a target="_blank" href="https://photos.app.goo.gl/ENh13MrYZA4duhAu9"><input name="submit"
+                                    type="submit" class="btn buttono" value="Xem Tất cả"></a>
+                        </div>
+                        <div class="text-center pre-wedding">
+                            <a target="_blank" href="https://photos.app.goo.gl/vPVRbvwCdXUCHahy8"><input name="submit"
+                                    type="submit" class="btn buttono" value="Xem Tất cả"></a>
+                        </div>
+                        <div class="text-center wedding">
+                            <a target="_blank" href="https://photos.app.goo.gl/nKXunCVLkDxxWPrF6"><input name="submit"
+                                    type="submit" class="btn buttono" value="Xem Tất cả"></a>
+                        </div>
+                        <div class="text-center after-wedding">
+                            <a target="_blank" href="https://photos.app.goo.gl/kbagarRAcZ2Zn4ky9"><input name="submit"
+                                    type="submit" class="btn buttono" value="Chia Sẻ"></a>
                         </div>
                     </div>
                 </div>
@@ -241,13 +256,13 @@
                         <div class="row">
                             <div class="col-md-12 text-center">
                                 <div class="caption">
-                                    <h2 class="title">Một chiếc video Pre-Wedding nho nhỏ</h2><br>
+                                    <h2 class="title">Cùng xem một chiếc Wedding video nho nhỏ nào!</h2><br>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 mb-60 img text-center">
-                                <a class="vid valign" href="https://youtu.be/TxmNgTUUgxM">
+                                <a class="vid valign" href="https://youtu.be/fIO3yF5t6Lg">
                                     <div class="vid-butn">
                                         <span class="icon"><i class="ti-control-play"></i></span>
                                     </div>
@@ -256,7 +271,7 @@
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div>
             <!-- When & Where -->
             <div id="whenwhere" class="whenwhere section-padding bg-pink">
                 <div class="container">
@@ -264,10 +279,21 @@
                         <div class="col-md-12 mb-30"> <span class="oliven-title-meta">Save The Date</span>
                             <h2 class="oliven-title">Thời Gian & Địa Điểm</h2>
                         </div>
+                        <i style="font-size: 12px;">*Mọi người ấn vào địa chỉ để nhận chỉ đường nha</i>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="whenwhere-img"> <img src="images/whenwhere/4.jpg" alt=""></div>
+                                    <div class="content">
+                                        <h5>Lễ Báo Hỉ</h5>
+                                        <p><a href="https://maps.app.goo.gl/ttpSTUyR2vXKDAw38" target="_blank"><i
+                                                    class="ti-location-pin"></i> Gala Royale - Sảnh TERRACE - Lầu 5
+                                                - 63 Mạc Đĩnh Chi, Phường Đakao, Quận 1 TP.HCM</a></p>
+                                        <p><i class="ti-time"></i> 28/09/2023 - 18:30pm</p>
+                                    </div>
+                                </div>
                                 <div class="item">
                                     <div class="whenwhere-img"> <img src="images/whenwhere/3.jpg" alt=""></div>
                                     <div class="content">
@@ -294,14 +320,6 @@
                                         <p><i class="ti-location-pin"></i> Xóm 2, thôn Hoà Bình, xã Nghĩa Hoà, Tư Nghĩa,
                                             Quảng Ngãi</p>
                                         <p><i class="ti-time"></i> <span>06/08/2023 - 17:00pm</span></p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="whenwhere-img"> <img src="images/whenwhere/4.jpg" alt=""></div>
-                                    <div class="content">
-                                        <h5>Lễ Báo Hỉ</h5>
-                                        <p><i class="ti-location-pin"></i>Đâu đó ở TP Hồ Chí Minh</p>
-                                        <p><i class="ti-time"></i> 18:30pm</p>
                                     </div>
                                 </div>
                             </div>
@@ -343,11 +361,11 @@
             $(document).ready(function () {
                 $('#home').vegas({
                     slides: [{
-                        src: "https://storage.googleapis.com/wedding-gallery-4426/TIEN4031.jpg"
+                        src: "images/header/TIEN4031.jpg"
                     }, {
-                        src: "https://storage.googleapis.com/wedding-gallery-4426/2.jpg"
+                        src: "images/header/2.jpg"
                     }, {
-                        src: "https://storage.googleapis.com/wedding-gallery-4426/TIEN3804%20ok.jpg"
+                        src: "images/header/TIEN3804.jpg"
                     }],
                     overlay: true,
                     transition: 'blur2',
@@ -358,20 +376,31 @@
                 });
 
                 var galleryImage = [
-                    { type: "wedding", href: "TIEN4023.jpg" },
-                    { type: "wedding", href: "TIEN3584.jpg" },
-                    { type: "wedding", href: "TIEN3624.jpg" },
-                    { type: "wedding", href: "TIEN3786.jpg" },
-                    { type: "engagement", href: "_DSC5395.jpg" },
-                    { type: "wedding", href: "TIEN3913.jpg" },
+                    { type: "engagement", href: "_DSC5431.jpg", text: "Lễ Ăn Hỏi" },
+                    { type: "engagement", href: "_DSC5395.jpg", text: "Lễ Ăn Hỏi" },
+                    { type: "engagement", href: "_TNP3542.jpg", text: "Lễ Ăn Hỏi" },
+                    { type: "engagement", href: "_DSC5553.jpg", text: "Lễ Ăn Hỏi" },
+                    { type: "engagement", href: "_DSC5566.jpg", text: "Lễ Ăn Hỏi" },
+                    { type: "pre-wedding", href: "TIEN4023.jpg", text: "Pre Wedding" },
+                    { type: "pre-wedding", href: "TIEN3804.jpg", text: "Pre Wedding" },
+                    { type: "pre-wedding", href: "TIEN3945.jpg", text: "Pre Wedding" },
+                    { type: "pre-wedding", href: "TIEN3848.jpg", text: "Pre Wedding" },
+                    { type: "pre-wedding", href: "TIEN3913.jpg", text: "Pre Wedding" },
+                    { type: "wedding", href: "HDZ00365.jpg", text: "Tân Hôn" },
+                    { type: "wedding", href: "HDZ01861.jpg", text: "Tân Hôn" },
+                    { type: "wedding", href: "HDZ09291.jpg", text: "Tân Hôn" },
+                    { type: "wedding", href: "HDZ09227.jpg", text: "Tân Hôn" },
+                    { type: "wedding", href: "VDN02100.jpg", text: "Tân Hôn" },
+                    { type: "wedding", href: "VDN02275.jpg", text: "Tân Hôn" },
+                    { type: "after-wedding", href: "baohi.jpg", text: "" },
                 ];
 
                 galleryImage.forEach(function (item) {
-                    var $galleryItem = $("<div>", { class: "col-md-4 gallery-item " + item.type });
+                    var $galleryItem = $("<div>", { class: "gallery-item " + item.type + (item.type !== 'after-wedding' ? ' col-md-4' : ' col-12') });
                     var $galleryLink = $("<a>", { href: "images/gallery/" + item.href, class: "img-zoom" });
                     var $galleryBox = $("<div>", { class: "gallery-box" });
                     var $galleryImg = $("<div>", { class: "gallery-img" }).append($("<img>", { src: "images/gallery/" + item.href, class: "img-fluid mx-auto d-block", alt: "" }));
-                    var $galleryDetail = $("<div>", { class: "gallery-detail" }).append($("<h4>", { class: "mb-0", text: item.type === 'wedding' ? "Pre Wedding" : 'Lễ Ăn Hỏi' }));
+                    var $galleryDetail = $("<div>", { class: "gallery-detail" }).append($("<h4>", { class: "mb-0", text: item.text }));
 
                     $galleryBox.append($galleryImg).append($galleryDetail);
                     $galleryLink.append($galleryBox);
@@ -380,8 +409,8 @@
                     $("#gallery-images").append($galleryItem);
                 });
 
-                   // Magnific Popup
-                   $(".img-zoom").magnificPopup({
+                // Magnific Popup
+                $(".img-zoom").magnificPopup({
                     type: "image"
                     , closeOnContentClick: !0
                     , mainClass: "mfp-fade"
